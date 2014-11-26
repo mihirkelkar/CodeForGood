@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>
+			Stakr
+		</title>
+		<script type="text/javascript" src="//ajax.googleapis.com/ajax/libs/angularjs/1.2.25/angular.min.js"></script>
+		<script type="text/javascript" src="/static/script.js"></script>
+		<link href='http://fonts.googleapis.com/css?family=Ubuntu:400,700' rel='stylesheet' type='text/css'>
+	</head>
+	<body ng-app="iMentor">
+		<div ng-controller="homeController" ng-init="getUserProfile()">
+			<h2>User Profile</h2>
+			<p>
+				<< current_user.name.first >>
+				<< current_user.name.last >>
+				<< current_user.grade >>
+				<< current_user.school >>
+			</p>
+			<ul ng-init="getMessages()">
+				<li ng-repeat="message in messages">
+					<< message.sender_name >>
+					<< message.timestamp >>
+				</li>
+			</ul>
+		</div>
+	</body>
+</html>

@@ -1,0 +1,19 @@
+<ion-view title="Search">
+  <ion-nav-buttons side="left">
+    <button menu-toggle="left" class="button button-icon icon ion-navicon"></button>
+  </ion-nav-buttons>
+  <ion-content class="has-header">
+    <input ng-model="searchSkills" class="item item-input" placeholder="Search Skills...">
+    <ul class="list">
+      <li class="item" ng-repeat="skill in skills | filter:searchSkills | orderBy: '+name'" style="font-weight: 700;">#{{skill}}</li>
+    </ul>
+  </ion-content>
+</ion-view>
+
+
+
+
+
+
+
+

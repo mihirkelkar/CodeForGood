@@ -1,0 +1,17 @@
+<ion-view title="Message Details" ng-init="messageDetails()">
+  <ion-nav-buttons side="left">
+    <button menu-toggle="left" class="button button-icon icon ion-navicon"></button>
+  </ion-nav-buttons>
+  <div class="bar bar-subheader">
+  <h2 class="title">{{message.sender_name}} to {{message.recipient_name}}</h2>
+  </div>
+  <ion-content class="has-header">
+      <img src="{{message.user_thumb}}">
+      <p class="pam">{{message.message_content}}</p>
+      <p style="display:block; text-align:right;" class="pam">{{message.timestamp}}</p>
+      <button class="button button-full icon-left ion-ios7-flag button-stable">Add to Milestones</button>
+      <button class="button button-full icon-left ion-ios7-calendar button-energized">Add to Calendar</button>
+      <a href="#/app/messages/search" class="button button-full icon-left ion-android-star button-calm">Add Skill</button>
+  </ion-content>
+
+</ion-view>
